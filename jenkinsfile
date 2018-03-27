@@ -4,6 +4,7 @@ agent any
 stages {
    stage ('build') {
      steps {
+     sh 'ant -f build.xml -v'
        echo 'building..'
           }
         }
@@ -15,8 +16,12 @@ stages {
      stage ('deploy'){
      steps {
        echo 'deploying...'
-
+     post {
+       always {
+        archive 'dist/*.jar'
       }
      }
     } 
    }
+  }
+ }
