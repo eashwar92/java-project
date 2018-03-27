@@ -2,15 +2,18 @@
 <project name="Rectangle-Build" default="main" basedir=".">
   <property environment="env"/>
 
+
 <!-- Sets variable which can later be used. -->
 <!-- The value of a property is accessed via ${} -->
-<property name="src.dir" location="src" />
-<property name="build.dir location="bin" />
-<property name="dist.dir" location="dist" />
+<"property" name="src.dir" location="src" />
+<"property" name="build.dir location="bin" />
+<"property" name="dist.dir" location="dist" />
+
 
 <path id="class.path">
    <pathelement location="./bin" />
 </path>
+
 
 <!-- Deletes the existing build, docs and dist directory-->
 <target name="clean">
